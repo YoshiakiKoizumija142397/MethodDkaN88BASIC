@@ -1,16 +1,48 @@
+> **MethodDka Ecosystem**: 本リポジトリは超高精度多項式根ソルバープロジェクトの一部です。
+> 全6つのディストリビューションを展開しています：
+> [📦 Core (CUI)](https://github.com/YoshiakiKoizumija142397/method-dka-core) | 
+> [🖥️ Win11 (GUI)](https://github.com/YoshiakiKoizumija142397/MethodDkaWindows11) | 
+> [🌐 Web (PWA)](https://github.com/YoshiakiKoizumija142397/MethodDka) | 
+> [📱 Android (Java)](https://github.com/YoshiakiKoizumija142397) | 
+> [📜 N88-BASIC](https://github.com/YoshiakiKoizumija142397/MethodDkaN88BASIC) |
+> [📜 VB Express](https://github.com/YoshiakiKoizumija142397/MethodDkaVBExpressEdition)
+
+---
+
 # MethodDkaN88BASIC
-MethdDkaプロジェクトの大元の
-N88BASICのソースコードです
 
-概要
+MethodDka プロジェクトの大元となる、**N88-BASIC 版のソースコード（歴史的復元版）**です。
 
-本書のコードは、高次代数方程式を解くための「DKA法（デュラン＝ケルナー法）の修正版」をN88-BASICで実装したものです。
-かつてプリンターで出力された往年のソースコードをデジタル化し、
-現在のJava/JS版プロジェクトのルーツとしてここにアーカイブしています。
+---
 
+## 概要 (Overview)
+本書のコードは、高次代数方程式を解くための「DKA法（デュラン＝ケルナー法）の修正版」を N88-BASIC で実装したものです。
+かつてプリンターで出力された往年のソースコードをデジタル化し、現在の現代的エコシステムのルーツとしてここにアーカイブしています。
 
-Source Reconstruction History / ソースコード復元経緯
-English
+---
+
+## MethodDka Lineage / MethodDka の系譜
+
+```text
+N88-BASIC Version
+        ↓
+VB Express Edition Version
+        ↓
+Modern MethodDka Ecosystem
+- Arbitrary Precision Arithmetic
+- Complex Coefficients
+- Simultaneous Root Finding
+- Horner Verification
+- Error Radius Estimation
+- Zenodo DOI Publication
+
+```
+
+---
+
+## Source Reconstruction History / ソースコード復元経緯
+
+### English
 
 This repository contains a reconstructed version of the original MethodDka source code.
 
@@ -26,9 +58,9 @@ Therefore, this repository should be regarded as a historical reconstruction bas
 
 The purpose of this publication is to preserve the historical development of MethodDka and make its implementation available for study, reference, software preservation, and future development.
 
-Released under the MIT License.
+---
 
-日本語
+### 日本語
 
 本リポジトリは、MethodDka のオリジナルソースコードを復元したものです。
 
@@ -44,28 +76,18 @@ Released under the MIT License.
 
 本公開の目的は、MethodDka の開発史を保存し、その実装を研究、学習、ソフトウェア保存活動、および将来の開発に役立てることにあります。
 
-MIT License のもとで公開しています。
+---
 
+## ライセンス (License)
 
+MIT License
 
-## MethodDka Lineage / MethodDka の系譜
+## 開発者 (Developer)
 
-N88-BASIC Version
-        ↓
-VB Express Edition Version
-        ↓
-Modern MethodDka
-  - Arbitrary Precision Arithmetic
-  - Complex Coefficients
-  - Simultaneous Root Finding
-  - Horner Verification
-  - Error Radius Estimation
-  - Zenodo DOI Publication
+小泉嘉章 (Yoshiaki Koizumi)
 
+## リポジトリ (Repository)
 
-MITライセンス
-開発者
-小泉嘉章
+[YoshiakiKoizumija142397/MethodDkaN88BASIC](https://www.google.com/url?sa=E&source=gmail&q=https://github.com/YoshiakiKoizumija142397/MethodDkaN88BASIC)
 
-リポジトリ
-YoshiakiKoizumija142397/MethodDkaN88BASIC
+```
