@@ -76,6 +76,8 @@ The purpose of this publication is to preserve the historical development of Met
 
 本公開の目的は、MethodDka の開発史を保存し、その実装を研究、学習、ソフトウェア保存活動、および将来の開発に役立てることにあります。
 
+N88BASIC互換BASICWindows９５をWindows１１でデバッグしました、動くはずですね、ありがとうございました
+
 ---
 
 ## ライセンス (License)
