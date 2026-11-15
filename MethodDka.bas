@@ -25,21 +25,21 @@
 350 FOR J = 1 TO N
 360   ST = SB * (J - 1) + SC
 370   SR(J) = SW * COS(ST)
-380 SI(J) = SW * SIN(ST)
+380   SI(J) = SW * SIN(ST)
 390 NEXT J
 400 REM --- DKA法の反復計算ループ ---
 410 M = 100: SE = 0.0000001
 420 FOR K = 1 TO M
-430   ERR = 0
+430   SW = 0
 440   FOR I = 1 TO N
-        REM --- ホーナー法による多項式 P(z_i) の計算 ---
+445     REM --- ホーナー法による多項式 P(z_i) の計算 ---
 450     P1 = 1: P2 = 0
 460     FOR J = 1 TO N
 470       T1 = P1 * SR(I) - P2 * SI(I)
 480       T2 = P1 * SI(I) + P2 * SR(I)
 490       P1 = T1 + SA(J): P2 = T2
 500     NEXT J
-        REM --- 分母（他の根との差の積）の計算 ---
+505     REM --- 分母（他の根との差の積）の計算 ---
 510     Q1 = 1: Q2 = 0
 520     FOR J = 1 TO N
 530       IF J = I THEN 580
@@ -48,13 +48,13 @@
 560       T2 = Q1 * DY + Q2 * DX
 570       Q1 = T1: Q2 = T2
 580     NEXT J
-        REM --- 修正量の計算 Δz = P(z) / Q(z) ---
+585     REM --- 修正量の計算 Δz = P(z) / Q(z) ---
 590     QW = Q1 * Q1 + Q2 * Q2
 600     IF QW = 0 THEN QW = 1E-20
 610     SX(I) = (P1 * Q1 + P2 * Q2) / QW
 620     SY(I) = (P2 * Q1 - P1 * Q2) / QW
 635   NEXT I
-      REM --- 根の更新 ---
+637   REM --- 根の更新 ---
 640   MAXDX = 0
 650   FOR I = 1 TO N
 660     SR(I) = SR(I) - SX(I)
@@ -62,11 +62,11 @@
 680     IF ABS(SX(I)) > MAXDX THEN MAXDX = ABS(SX(I))
 690     IF ABS(SY(I)) > MAXDX THEN MAXDX = ABS(SY(I))
 700   NEXT I
-      REM --- 収束判定 ---
+705   REM --- 収束判定 ---
 710   IF MAXDX < SE THEN GOTO 760
 720 NEXT K
 730 PRINT "収束しませんでした (NON CONVERGENCE)"
-740 GOTO 770
+740 GOTO 820
 760 PRINT "--- 収束しました (回数="; K; ") ---"
 775 REM --- 結果の表示 ---
 780 PRINT "番号", "実数部", "虚数部"
